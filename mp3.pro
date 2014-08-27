@@ -17,14 +17,17 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     logger.cpp \
     controller.cpp \
-    playercontrols.cpp
+    playercontrols.cpp \
+    playlistwindow.cpp
 
 HEADERS  += mainwindow.h \
     logger.h \
     controller.h \
-    playercontrols.h
+    playercontrols.h \
+    playlistwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    playlistwindow.ui
 
 CONFIG += console
 
