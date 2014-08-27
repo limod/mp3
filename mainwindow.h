@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "controller.h"
+#include "playlistwindow.h"
 
 namespace Ui {
 class MainWindow;
@@ -25,6 +26,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Controller* controller;
+    playlistWindow *pw;
 };
 
 #endif // MAINWINDOW_H
