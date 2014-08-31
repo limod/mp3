@@ -20,6 +20,7 @@ private:
 
     QMediaPlayer::State playerState;
 
+
 private slots:
     void playClicked();
     void pauseClicked();

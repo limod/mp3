@@ -18,13 +18,15 @@ SOURCES += main.cpp\
     logger.cpp \
     controller.cpp \
     playercontrols.cpp \
-    playlistwindow.cpp
+    playlistwindow.cpp \
+    dock.cpp
 
 HEADERS  += mainwindow.h \
     logger.h \
     controller.h \
     playercontrols.h \
-    playlistwindow.h
+    playlistwindow.h \
+    dock.h
 
 FORMS    += mainwindow.ui \
     playlistwindow.ui

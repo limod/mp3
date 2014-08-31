@@ -1,10 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <iostream>
-#include "controller.h"
 #include <QMediaPlayer>
-#include "playercontrols.h"
 #include <QMediaPlaylist>
+#include "controller.h"
+#include "playercontrols.h"
+#include "dock.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -32,6 +33,13 @@ MainWindow::MainWindow(QWidget *parent) :
     player->setPlaylist(playlist); */
 
     //this->move(100,100);
+
+    Dock *dock = new Dock(this);
+    dock->setMainWidget(this);
+
+    this->pw = new playlistWindow(this);
+    dock->addWidget(this->pw);
+     pw->show();
 }
 
 MainWindow::~MainWindow()
@@ -93,6 +101,7 @@ void MainWindow::on_btnPlay_clicked()
     qDebug("btnPlay click!");
 
     this->pw = new playlistWindow(this);
+
     pw->move(100,100);
     pw->resize(200,100);
     pw->show();
